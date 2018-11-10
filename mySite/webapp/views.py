@@ -22,7 +22,8 @@ def echo(request) :
     return render(echo, 'webapp/echo.html')
 
 def seatSelection(request):
-    return render(request, 'webapp/seatSelection.html')
+    context =  {'seat_class': 'test_class'}
+    return render(request, 'webapp/seatSelection.html', {'seat_class': 'test_class'})
 
 def confirmationPage(request, seatNumber):
     return HttpResponse("You're looking at seat number %s" % seatNumber)
@@ -71,4 +72,3 @@ def create_post(request):
             json.dumps({"nothing to see": "this isn't happening"}),
             content_type="application/json"
         )
-
