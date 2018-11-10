@@ -24,6 +24,9 @@ def echo(request) :
 def seatSelection(request):
     return render(request, 'webapp/seatSelection.html')
 
+def confirmationPage(request, seatNumber):
+    return HttpResponse("You're looking at seat number %s" % seatNumber)
+
 # class PaymentView(TemplateView):
 #     template_name = 'webapp/echo.html'
 #
