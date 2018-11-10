@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/concert-hall.css">
 </head>
 <body>
-<form action="{% url 'confirmationPage' 15 %}" method="post"><input type="submit" value="Submit"></form>
+<form action="{% url 'confirmationPage' 15 %}" method="post"><input type="submit" value="Submit">{% csrf_token %}</form>
 <div id="seat-map">
     <!--Row A-->
     <div class="row">
