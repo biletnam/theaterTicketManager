@@ -22,8 +22,15 @@ def echo(request) :
     return render(echo, 'webapp/echo.html')
 
 def seatSelection(request):
-    context =  {'seat_class': 'test_class'}
-    return render(request, 'webapp/seatSelection.html', {'seat_class': 'test_class'})
+    context = {}
+    # Row A
+    for i in range(1,36):
+        key = 'A' + str(i)
+        context[key] = 'seat'
+    context['A17'] = 'seat-sold'
+    context['A16'] = 'seat-sold'
+    context['A15'] = 'seat-sold'
+    return render(request, 'webapp/seatSelection.html', context)
 
 def confirmationPage(request, seat_numbers):
     return HttpResponse(seat_numbers)
