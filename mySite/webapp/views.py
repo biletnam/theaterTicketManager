@@ -25,8 +25,8 @@ def seatSelection(request):
     context =  {'seat_class': 'test_class'}
     return render(request, 'webapp/seatSelection.html', {'seat_class': 'test_class'})
 
-def confirmationPage(request, seatNumber):
-    return HttpResponse("You're looking at seat number %s" % seatNumber)
+def confirmationPage(request, seat_numbers):
+    return HttpResponse(seat_numbers)
 
 # class PaymentView(TemplateView):
 #     template_name = 'webapp/echo.html'

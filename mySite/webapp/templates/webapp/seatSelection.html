@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/css/concert-hall.css">
 </head>
 <body>
-<form action="{% url 'confirmationPage' 15 %}" method="post"><input type="submit" value="Submit">{% csrf_token %}</form>
+<button id="button" input type="submit">Submit!</button>
 <div id="seat-map">
     <!--Row A-->
     <div class="row">
@@ -41,7 +41,7 @@
         <span class="{{ seat_class }} twenty-nine"></span>
         <span class="seat thirty"></span>
         <span class="seat thirty-one"></span>
-        <span class="seat thirty-two"></span>
+        <span id="A20" class="seat thirty-two"></span>
         <span class="aisle"></span>
         <span class="aisle"></span>
         <span class="seat thirty-three"></span>
